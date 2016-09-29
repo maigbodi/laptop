@@ -19,10 +19,6 @@ read passwd
 stty echo
 echo
 
-
-# Exit if any subprocess returns non-zero.
-# set -e
-
 # OSX Settings
 fancy_echo "Setting desktop background..."
 curl https://raw.githubusercontent.com/spartaglobal/laptop/master/assets/avatar.jpg > "$HOME/Pictures/avatar.jpg"
@@ -39,19 +35,8 @@ defaults write -g KeyRepeat -int 0
 # Disable press-and-hold and enable KeyRepeat instead
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-
-###### ENABLE THESE FOR TRUSTED USERS ONLY ######
-# Disable Gatekeepr - http://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/
-#echo $passwd | sudo -S -k spctl --master-disable
-# Disable System Integrity Protection (rootless)
-#echo $passwd | sudo -S -k csrutil disable
-#################################################
-
-
 # Profile Picture
 fancy_echo "Setting user avatar..."
-# sudo dscl /Local/Default -delete /Users/$USER Picture
-# sudo dscl /Local/Default create $HOME Picture "$HOME/Pictures/avatar.jpg"
 
 echo "0x0A 0x5C 0x3A 0x2C dsRecTypeStandard:Users 4 dsAttrTypeStandard:RecordName externalbinary:dsAttrTypeStandard:JPEGPhoto dsAttrTypeStandard:UniqueID dsAttrTypeStandard:PrimaryGroupID dsAttrTypeStandard:GeneratedUID" > $HOME/avatar_import.txt
 echo $USER:$HOME/Pictures/avatar.jpg:$UID:$(id -g):$(dscl . -read /Users/$USER GeneratedUID | cut -d' ' -f2) >> $HOME/avatar_import.txt
@@ -134,13 +119,16 @@ brew cask install font-inconsolata
 brew cask install font-ubuntu
 brew cask install font-source-sans-pro
 
-echo $passwd | sudo -S -k brew cask install virtualbox vagrant google-chrome firefox github-desktop slack
+echo $passwd | sudo -S -k brew cask install virtualbox vagrant google-chrome firefox github-desktop slack macdown
 
 # Text Editors
 echo $passwd | sudo -S -k brew cask install sublime-text atom
 
 # Java JDK
 echo $passwd | sudo -S -k brew cask install java
+
+# Install jMeter
+brew install jmeter
 
 # Cleanup
 brew cleanup
@@ -223,14 +211,6 @@ cp -r $temp/mount/*.app /Applications
 hdiutil detach $temp/mount
 rm -rf $temp
 
-# Install jMeter
-fancy_echo "Installing jMeter..."
-curl -s http://mirrors.ukfast.co.uk/sites/ftp.apache.org//jmeter/binaries/apache-jmeter-3.0.tgz | tar xvz -C $HOME
-
-# Install MacDown
-fancy_echo "Installing MacDown..."
-curl -L -s https://github.com/uranusjr/macdown/releases/download/v0.6/MacDown.app.zip | tar xvz -C /Applications
-
 # Configure Dock
 fancy_echo "Configuring dock..."
 /usr/libexec/PlistBuddy -c "Add :magnification bool true" ~/Library/Preferences/com.apple.dock.plist
@@ -277,6 +257,7 @@ echo $passwd | sudo -S -k softwareupdate -i -a
 echo
 fancy_echo "----------------------Local Setup Finished!----------------------"
 
+## Vagrant Stuff Removed - D Smith ##
 
 # Clone and install Workstation VM
 # fancy_echo "Installing Sparta Workstation..."
@@ -289,9 +270,6 @@ fancy_echo "----------------------Local Setup Finished!----------------------"
 
 
 echo
-fancy_echo "*************************************************"
-echo " Don't forget to install XCode from the App Store"
-fancy_echo "*************************************************"
 
 fancy_echo "Restarting..."
 # vagrant halt && echo $passwd | sudo -S -k shutdown -r now "Restarting"
