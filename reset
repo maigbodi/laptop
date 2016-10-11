@@ -1,0 +1,95 @@
+#!/bin/sh
+
+# Sparta Global laptop reset script!
+
+echo "Welcome to the Sparta macOS Resetter"
+echo "------------------------------------"
+echo
+
+source config.sh
+
+fancy_echo "This script will RESET your laptop"
+input_echo "Are you sure you want to RESET this laptop? There is no going back! Type yes to continue:"
+read continue_confirmed
+
+if ! [ "$continue_confirmed" = "yes" ]
+then
+   fancy_echo "Reset cancelled. Exiting..."
+   exit 0
+else
+  green_echo "Running reset script..."
+  echo
+fi
+
+# Empty Trash, Downloads and Documents folders
+rm -rf $HOME/.Trash/*
+rm -rf $HOME/Downloads/*
+rm -rf $HOME/Documents/*
+
+# Delete Chrome History
+rm -rf $HOME/Library/Application\ Support/Google/Chrome/Default/History
+rm -rf $HOME/Library/Application\ Support/Google/Chrome/Default/History-journal
+
+# Clear out Safari
+mv $HOME/Library/Safari $HOME/Desktop/Safari-`date +%Y%m%d%H%M%S`
+rm -Rf $HOME/Library/Caches/Apple\ -\ Safari\ -\ Safari\ Extensions\ Gallery
+rm -Rf $HOME/Library/Caches/Metadata/Safari
+rm -Rf $HOME/Library/Caches/com.apple.Safari
+rm -Rf $HOME/Library/Caches/com.apple.WebKit.PluginProcess
+rm -Rf $HOME/Library/Cookies/Cookies.binarycookies
+rm -Rf $HOME/Library/Preferences/Apple\ -\ Safari\ -\ Safari\ Extensions\ Gallery
+rm -Rf $HOME/Library/Preferences/com.apple.Safari.LSSharedFileList.plist
+rm -Rf $HOME/Library/Preferences/com.apple.Safari.RSS.plist
+rm -Rf $HOME/Library/Preferences/com.apple.Safari.plist
+rm -Rf $HOME/Library/Preferences/com.apple.WebFoundation.plist
+rm -Rf $HOME/Library/Preferences/com.apple.WebKit.PluginHost.plist
+rm -Rf $HOME/Library/Preferences/com.apple.WebKit.PluginProcess.plist
+rm -Rf $HOME/Library/PubSub/Database
+rm -Rf $HOME/Library/Saved\ Application\ State/com.apple.Safari.savedState
+
+# Remove all Cask Software
+brew cask uninstall --force $(brew cask list)
+brew cask zap --force $(brew cask list)
+
+brew cask cleanup
+
+green_echo "Removed Caskware..."
+
+#Remove all homebrew software
+brew remove --force $(brew list)
+brew cleanup
+brew prune
+
+green_echo "Femoved Homebrew software"
+
+# Clear macOS Caches
+fm -rf /Library/Caches/*
+fm -rf $HOME/Library/Caches/*
+
+# Clear out all dotfiles
+rm -rf $HOME/.*
+
+
+# Run setup scripts
+source homebrew.sh
+source ruby.sh
+source dotfiles.sh
+source node.sh
+source vim.sh # Must be sourced after dotfiles.sh
+source macos.sh
+
+# Run Apple Update
+fancy_echo "Updating macOS..."
+echo $passwd | sudo -S -k softwareupdate -i -a
+
+echo
+green_echo "---------------------- Setup Finished! ----------------------"
+green_echo "💃💃               🍺  Done reprovisioning laptop! 🍺           💃💃"
+green_echo "-------------------------------------------------------------"
+echo
+
+sleep 5
+
+fancy_echo "Restarting..."
+echo $passwd | sudo -S -k shutdown -r now "Restarting"
+unset passwd

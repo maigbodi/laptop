@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Sparta Global laptop reset script!
+
+echo "Welcome to the Sparta macOS Installer"
+echo "-------------------------------------"
+echo
+
+source config.sh
+source homebrew.sh
+source ruby.sh
+source dotfiles.sh
+source node.sh
+source vim.sh # Must be sourced after dotfiles.sh
+source macos.sh
+
+# Run Apple Update
+fancy_echo "Updating macOS..."
+echo $passwd | sudo -S -k softwareupdate -i -a
+
+echo
+green_echo "---------------------- Setup Finished! ----------------------"
+green_echo "💃💃               🍺  Done provisioning laptop! 🍺           💃💃"
+green_echo "-------------------------------------------------------------"
+echo
+
+sleep 5
+
+fancy_echo "Restarting..."
+echo $passwd | sudo -S -k shutdown -r now "Restarting"
+unset passwd
