@@ -2,111 +2,26 @@
 
 This script is designed to install and configure Sparta student and trainer macOS machines.
 
-## Manual Steps to install
+## Steps to configure a new Mac
 
 1. Initial macOS Setup Wizard (Laptop name, WiFi etc). Admin staff will provide the username and password to use when configuring this part.
-2. Run `xcode-select --install` to isnall the Command Line tools.
-3. Run install script: `cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/mac)`
-4. Type the admin password.
+2. Run `xcode-select --install` to install the Command Line tools.
+3. Run install script: `cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/install)`
+4. Type the admin password (the one used to login to the laptop).
 5. Wait **Ages**!
 6. Celebrate 🍻!
 
-## Setting your terminal profile and font
+### Setting your terminal profile and font
 
-If SpartaPro doesn;t appear in the list on the left, open the preferences of Terminal.app, click the cog and choose **Import**. Choose the SpartaPro theme, which should be at `~/SpartaPro.terminal`. Click the **Default** button to set it as your default. Finally, change the font to `Inconsolata 16pt`.
+Open the preferences of Terminal.app. If SpartaPro doesn't appear in the list on the left, click the cog and choose **Import**. Choose the SpartaPro theme, which should be at `~/SpartaPro.terminal`. Click the **Default** button to set it as your default. Finally, change the font to `Inconsolata 16pt`.
 
 ![Image](https://raw.githubusercontent.com/spartaglobal/laptop/master/assets/terminal.png)
 
-## What does it do?
+## Resetting a laptop
 
-The script is fairly complex, and configures student laptops for our training courses. In general, it:
+To reset a laptop after a course, run the reset script with `cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/reset)`
 
-- Sets the desktop background and user avatar.
-- Sets a faster key repeat rate.
-- Downloads and installs Sparta fonts, and rebuilds the font cache.
-- Downloads and applies the `SpartaPro.terminal` theme.
-- Installs and configures [Homebrew](http://brew.sh/).
-- Installs the following libraries and tools using homebrew:
-
-  - openssl
-  - libxml2
-  - libyaml
-  - ctags
-  - git
-  - vim
-  - heroku-toolbelt
-  - hub
-  - imagemagick
-  - curl
-  - chromedriver
-  - httpie
-  - node
-  - rbenv
-  - ruby-build
-  - rbenv-default-gems
-  - postgres
-  - redis
-  - sqlite
-  - mongodb
-
-- Sets `mysql` to run at startup.
-
-- Installs the following GUI applications using `brew cask`:
-
-  - Virtualbox
-  - Vagrant
-  - Google Chrome
-  - Firefox
-  - Sublime Text 3
-  - Java JDK
-  - Atom
-  - GitHub Desktop
-  - Slack
-
-- Configures rbenv to `install` `bundler`, `brice`, `gist`, `pry`, `pry-doc`, `awesome_print`, `specific_install` with every new ruby installation.
-
-- Installs the latest ruby version available from rbenv, and sets it globally.
-
-- Updates all system gems and configures bundler to use parallel installation.
-
-- Updates NPM and Node.
-- Installs sensible `.vimrc`, `.bash_profile`, `.irbrc`, `.gitconfig` and `.pryrc` dotfiles.
-- Installs vim-plug and the Vim plugins listed in `.vimrc`.
-- Installs the following apps to `/Applications`:
-
-  - MySQL Workbench
-  - MacDown
-
-- Installs and unpacks JMeter into `~`.
-
-- Removes all default items from the dock, switches on magnification and adds Google Chrome, Atom, Mail and Slack to the dock.
-
-- Runs a macOS Software Update.
-
-- Builds the `locate` database.
-- Clones the Sparta Workstation VM into `~/sparta/workstation`, configures it and provisions the vagrant box.
-- Shuts down the Vagrant Box and restarts the machine.
-
-## Todo
-
-- Split into multiple Scripts
-
-  - Config: Basic config stuff and all the curl stuff
-  - Install: Homebrew and all the Apps
-  - Cleanup: All the required cleanup
-
-- Add check to each section to only run them if needed, to allow multiple runs (see [here](https://github.com/18F/laptop/blob/master/mac)).
-
-- Build `reinstall.sh` script to reset laptops to initial state:
-
-  - Remove all rubies and gems
-  - Remove all brew installed packages
-  - Clear downloads, home director and Desktop
-  - Empty Trash
-  - Uninstall any extra mac apps
-  - Clear Safari Browsing History
-  - Reset as many macOS settings as possible
-  - Run the installations script again
+**THIS IS A DESTRUCTIVE SCRIPT AND WILL REMOVE APPLICATIONS, FILES AND SETTINGS. THERE IS NO WAY TO UNDO ITS ACTIONS**
 
 ## Inspiration
 
