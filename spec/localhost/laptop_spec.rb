@@ -55,3 +55,9 @@ Config.empty_directories.each do |dir|
     end
   end
 end
+
+Config.dotfiles.each do |dotfile|
+  describe file(ENV['HOME'] + "/." + dotfile) do
+    it { should be_file }
+  end
+end

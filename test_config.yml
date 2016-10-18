@@ -43,6 +43,13 @@ homebrew_packages:
   - chromedriver
   - m-cli
   - vagrant
+dotfiles:
+  - bash_profile
+  - vimrc
+  - pryrc
+  - irbrc
+  - gitconfig
+  - git_status_in_prompt.sh
 gui_applications:
   root:
     - 1password.app
