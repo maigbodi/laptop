@@ -66,6 +66,17 @@ quicklook_plugins:
   root:
   user:
     - QLMarkdown
+empty_directories:
+  - ~/Pictures
+  - ~/Downloads
+  - ~/Documents
+  - ~/Desktop
+  - ~/Pictures
+  - ~/Music
+  - ~/Movies
+  - ~/Public
+  - ~/Sites
+  - ~/.Trash
 defaults:
   NSGlobalDomain:
     ApplePressAndHoldEnabled: 0

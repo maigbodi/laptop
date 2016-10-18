@@ -44,3 +44,13 @@ Config.defaults.each do |k, v|
     end
   end
 end
+
+Config.empty_directories.each do |dir|
+  dir = dir.gsub(/~/, "#{ENV['HOME']}")
+  describe file(dir) do
+    it { should be_a_directory }
+    it 'should be an empty directory' do
+      Dir.glob(dir + "/*").should eq []
+    end
+  end
+end
