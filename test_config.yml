@@ -65,7 +65,11 @@ gui_applications:
 quicklook_plugins:
   root:
   user:
+    - QLColorCode
     - QLMarkdown
+    - QLPrettyPatch
+    - QuickLookCSV
+    - QuickLookJSON
 empty_directories:
   - ~/Pictures
   - ~/Downloads
