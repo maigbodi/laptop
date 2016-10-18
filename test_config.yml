@@ -1,0 +1,73 @@
+homebrew_packages:
+  - openssl
+  - coreutils
+  - md5sha1sum
+  - ctags
+  - libxml2
+  - libpng
+  - freetype
+  - ffmpeg
+  - readline
+  - git
+  - ant
+  - ack
+  - tmux
+  - vim
+  - zsh
+  - rcm
+  - reattach-to-user-namespace
+  - the_silver_searcher
+  - httpie
+  - curl
+  - vimpager
+  - p7zip
+  - grep
+  - tree
+  - heroku-toolbelt
+  - hub
+  - awscli
+  - docker
+  - imagemagick
+  - qt
+  - jmeter
+  - libyaml
+  - nvm
+  - ruby-build
+  - rbenv
+  - ruby-default-gems
+  - postgres
+  - redis
+  - sqlite
+  - mongodb
+  - mysql
+  - chromedriver
+  - m-cli
+  - vagrant
+gui_applications:
+  root:
+    - 1password.app
+    - Charles.app
+    - Mongohub.app
+    - Pocket.app
+    - Postman.app
+    - Slack.app
+    - Github Desktop.app
+    - XQuartz.app
+    - VirtualBox.app
+    - Firefox.app
+    - Google Chrome.app
+    - Atom.app
+    - Sublime Text.app
+    - Macdown.app
+    - Sequel Pro.app
+    - MySQLWorkbench.app
+  user:
+quicklook_plugins:
+  root:
+  user:
+    - QLMarkdown
+defaults:
+  NSGlobalDomain:
+    ApplePressAndHoldEnabled: 0
+  com.apple.Safari:
+    HomePage: about:blank

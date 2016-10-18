@@ -98,7 +98,8 @@ fancy_echo "Updating macOS..."
 echo $passwd | sudo -S -k softwareupdate -i -a
 green_echo "done."
 
-#-> RUN UNIT TESTS HERE
+# Run tests
+source tests.sh
 
 echo
 green_echo "---------------------- Setup Finished! ----------------------"
