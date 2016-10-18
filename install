@@ -17,6 +17,7 @@ source macos.sh
 # Run Apple Update
 fancy_echo "Updating macOS..."
 echo $passwd | sudo -S -k softwareupdate -i -a
+green_echo "done."
 
 echo
 green_echo "---------------------- Setup Finished! ----------------------"
