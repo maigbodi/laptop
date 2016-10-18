@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Cloning laptop repo"
 git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
-git checkout v2
+cd $HOME/laptop && git checkout v2 #Remove once on master
 chmod 777 $HOME/laptop/install
 $HOME/laptop/install
