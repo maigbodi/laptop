@@ -37,6 +37,9 @@ if Config.quicklook_plugins[:user].respond_to? :each
 end
 Config.defaults.each do |k, v|
   v.each do |sk,sv|
+    if sv.respond_to? :include?
+      sv = sv.gsub(/~/, "#{ENV['HOME']}") if sv.include? "~"
+    end
     describe command("defaults read #{k.to_s} #{sk}") do
       its(:stdout) { should match /#{sv}/ }
     end
