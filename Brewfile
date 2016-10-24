@@ -59,7 +59,7 @@ brew "libyaml" # should come after openssl
 brew "nvm"
 brew "ruby-build"
 brew "rbenv"
-brew "ruby-default-gems"
+brew "rbenv-default-gems"
 
 # Databases
 brew "postgres", restart_service: true
