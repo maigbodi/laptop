@@ -21,6 +21,9 @@ else
   echo
 fi
 
+# Set current directory, so we can change back to it in the scripts.
+export LAPTOP_INSTALL_DIR=$(pwd)
+
 fancy_echo "Removing User Files..."
 rm -rf $HOME/Downloads/*
 green_echo "Downloads Cleared"
