@@ -77,8 +77,8 @@ brew prune
 green_echo "done."
 
 fancy_echo "Clearing macOS caches..."
-fm -rf /Library/Caches/*
-fm -rf $HOME/Library/Caches/*
+rm -rf /Library/Caches/*
+rm -rf $HOME/Library/Caches/*
 green_echo "done."
 
 fancy_echo "Clearing dotfiles..."
