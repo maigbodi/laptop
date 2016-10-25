@@ -51,20 +51,20 @@ rm -rf $HOME/Library/Application\ Support/Google/Chrome/Default/History-journal
 
 fancy_echo "Cleaning Safari..."
 mv $HOME/Library/Safari $HOME/Desktop/Safari-`date +%Y%m%d%H%M%S`
-rm -Rf $HOME/Library/Caches/Apple\ -\ Safari\ -\ Safari\ Extensions\ Gallery
-rm -Rf $HOME/Library/Caches/Metadata/Safari
-rm -Rf $HOME/Library/Caches/com.apple.Safari
-rm -Rf $HOME/Library/Caches/com.apple.WebKit.PluginProcess
-rm -Rf $HOME/Library/Cookies/Cookies.binarycookies
-rm -Rf $HOME/Library/Preferences/Apple\ -\ Safari\ -\ Safari\ Extensions\ Gallery
-rm -Rf $HOME/Library/Preferences/com.apple.Safari.LSSharedFileList.plist
-rm -Rf $HOME/Library/Preferences/com.apple.Safari.RSS.plist
-rm -Rf $HOME/Library/Preferences/com.apple.Safari.plist
-rm -Rf $HOME/Library/Preferences/com.apple.WebFoundation.plist
-rm -Rf $HOME/Library/Preferences/com.apple.WebKit.PluginHost.plist
-rm -Rf $HOME/Library/Preferences/com.apple.WebKit.PluginProcess.plist
-rm -Rf $HOME/Library/PubSub/Database
-rm -Rf $HOME/Library/Saved\ Application\ State/com.apple.Safari.savedState
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Caches/Apple\ -\ Safari\ -\ Safari\ Extensions\ Gallery
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Caches/Metadata/Safari
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Caches/com.apple.Safari
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Caches/com.apple.WebKit.PluginProcess
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Cookies/Cookies.binarycookies
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/Apple\ -\ Safari\ -\ Safari\ Extensions\ Gallery
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/com.apple.Safari.LSSharedFileList.plist
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/com.apple.Safari.RSS.plist
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/com.apple.Safari.plist
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/com.apple.WebFoundation.plist
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/com.apple.WebKit.PluginHost.plist
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Preferences/com.apple.WebKit.PluginProcess.plist
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/PubSub/Database
+echo $passwd | sudo -S -k rm -Rf $HOME/Library/Saved\ Application\ State/com.apple.Safari.savedState
 green_echo "done."
 
 fancy_echo "Removing homebrew cask apps..."
@@ -80,8 +80,8 @@ brew prune
 green_echo "done."
 
 fancy_echo "Clearing macOS caches..."
-rm -rf /Library/Caches/*
-rm -rf $HOME/Library/Caches/*
+echo $passwd | sudo -S -k rm -rf /Library/Caches/*
+echo $passwd | sudo -S -k rm -rf $HOME/Library/Caches/*
 green_echo "done."
 
 fancy_echo "Clearing dotfiles..."
