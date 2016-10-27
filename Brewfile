@@ -89,7 +89,6 @@ cask 'font-ubuntu'
 cask 'font-source-sans-pro'
 
 # Apps
-cask '1password'
 cask 'charles'
 cask 'mongohub'
 cask 'pocket'

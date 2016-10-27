@@ -33,6 +33,16 @@ echo
 
 sleep 5
 
-fancy_echo "Restarting..."
-echo $passwd | sudo -S -k shutdown -r now "Restarting"
-unset passwd
+fancy_echo "Don't forget to check the output of the unit tests."
+input_echo "Do you want to restart the machine now? (type 'yes')"
+read continue_confirmed
+
+if ! [ "$continue_confirmed" = "yes" ]
+then
+   fancy_echo "done..."
+   exit 0
+else
+  fancy_echo "Restarting..."
+  echo $passwd | sudo -S -k shutdown -r now "Restarting machine"
+  unset passwd
+fi
