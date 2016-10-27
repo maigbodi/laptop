@@ -21,6 +21,7 @@ brew 'libpng'
 brew 'freetype'
 brew 'ffmpeg'
 brew 'readline'
+brew 'doxygen'
 
 # UNIX Tools
 brew 'git'
