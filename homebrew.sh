@@ -1,7 +1,7 @@
 
 # Install Homebrew
-fancy_echo "Creating ~/.bin folder..."
 if [ ! -d "$HOME/.bin/" ]; then
+  fancy_echo "Creating ~/.bin folder..."
   mkdir "$HOME/.bin"
 fi
 
