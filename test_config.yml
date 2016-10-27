@@ -23,7 +23,7 @@ homebrew_packages:
   - p7zip
   - grep
   - tree
-  - heroku-toolbelt
+  - heroku
   - hub
   - awscli
   - docker
@@ -34,15 +34,14 @@ homebrew_packages:
   - nvm
   - ruby-build
   - rbenv
-  - ruby-default-gems
-  - postgres
+  - rbenv-default-gems
+  - postgresql
   - redis
   - sqlite
   - mongodb
   - mysql
   - chromedriver
   - m-cli
-  - vagrant
 dotfiles:
   - bash_profile
   - vimrc
@@ -86,7 +85,6 @@ empty_directories:
   - ~/Music
   - ~/Movies
   - ~/Public
-  - ~/Sites
   - ~/.Trash
 defaults:
   NSGlobalDomain:
