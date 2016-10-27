@@ -76,7 +76,6 @@ brew "chromedriver"
 brew 'm-cli'
 
 # Cask QL Plugins
-cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlprettypatch'
 cask 'quicklook-json'
@@ -93,7 +92,6 @@ cask 'mongohub'
 cask 'postman'
 cask 'slack'
 cask 'github-desktop'
-cask 'xquartz'
 cask 'virtualbox'
 cask 'vagrant'
 cask 'firefox'

@@ -51,13 +51,11 @@ dotfiles:
   - git_status_in_prompt.sh
 gui_applications:
   root:
-    - 1password.app
     - Charles.app
     - Mongohub.app
     - Postman.app
     - Slack.app
     - Github Desktop.app
-    - XQuartz.app
     - VirtualBox.app
     - Firefox.app
     - Google Chrome.app
@@ -70,10 +68,8 @@ gui_applications:
 quicklook_plugins:
   root:
   user:
-    - QLColorCode
     - QLMarkdown
     - QLPrettyPatch
-    - QuickLookCSV
     - QuickLookJSON
 empty_directories:
   - ~/Pictures
