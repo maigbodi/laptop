@@ -6,10 +6,16 @@ This script is designed to install and configure Sparta student and trainer macO
 
 1. Initial macOS Setup Wizard (Laptop name, WiFi etc). Admin staff will provide the username and password to use when configuring this part.
 2. Run `xcode-select --install` to install the Command Line tools.
-3. Run install script: `cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/v2/remote-install)`
-4. Type the admin password (the one used to login to the laptop).
-5. Wait **Ages**!
-6. Celebrate 🍻!
+3. Run install script:
+
+```shell
+git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
+cd $HOME/laptop
+chmod 777 $HOME/laptop/install
+$HOME/laptop/install
+```
+
+Type the **password you use to login** when prompted.
 
 ### Setting your terminal profile and font
 
@@ -19,7 +25,16 @@ Open the preferences of Terminal.app. If SpartaPro doesn't appear in the list on
 
 ## Resetting a laptop
 
-To reset a laptop after a course, run the reset script with `cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/v2/remote-reset)`
+To reset a laptop after a course, run the reset script with:
+
+```shell
+git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
+cd $HOME/laptop
+chmod 777 $HOME/laptop/reset
+$HOME/laptop/reset
+```
+
+Type the **password you use to login** when prompted.
 
 **THIS IS A DESTRUCTIVE SCRIPT AND WILL REMOVE APPLICATIONS, FILES AND SETTINGS. THERE IS NO WAY TO UNDO ITS ACTIONS**
 
