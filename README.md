@@ -11,7 +11,6 @@ This script is designed to install and configure Sparta student and trainer macO
 ```shell
 git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
 cd $HOME/laptop
-chmod 777 $HOME/laptop/install
 $HOME/laptop/install
 ```
 
@@ -30,7 +29,6 @@ To reset a laptop after a course, run the reset script with:
 ```shell
 git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
 cd $HOME/laptop
-chmod 777 $HOME/laptop/reset
 $HOME/laptop/reset
 ```
 
