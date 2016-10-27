@@ -39,7 +39,7 @@ read restart_confirmed
 
 if ! [ "$restart_confirmed" = "yes" ]
 then
-   fancy_echo "done..."
+   fancy_echo "All done!"
    exit 0
 else
   fancy_echo "Restarting..."
