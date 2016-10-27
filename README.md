@@ -36,6 +36,22 @@ Type the **password you use to login** when prompted.
 
 **THIS IS A DESTRUCTIVE SCRIPT AND WILL REMOVE APPLICATIONS, FILES AND SETTINGS. THERE IS NO WAY TO UNDO ITS ACTIONS**
 
+## Running in a single command
+
+If you need to script this process, there are two small scripts provided: `remote-install` and `remote-reset`. They _should_ clone down the repo and execute it in a single command, but haven't been fully tested yet.
+
+To do so, run:
+
+```shell
+`cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-install)`
+```
+
+or
+
+```shell
+`cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-reset)`
+```
+
 ## Inspiration
 
 Bits of this script were borrowed from all over the internet, but in particular:
