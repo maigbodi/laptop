@@ -54,7 +54,6 @@ gui_applications:
     - 1password.app
     - Charles.app
     - Mongohub.app
-    - Pocket.app
     - Postman.app
     - Slack.app
     - Github Desktop.app

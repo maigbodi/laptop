@@ -114,10 +114,10 @@ sleep 5
 
 
 fancy_echo "Don't forget to check the output of the unit tests."
-input_echo "Do you want to restart the machine now? (type 'yes')"
-read continue_confirmed
+input_echo "Do you want to restart the machine now? (type 'yes'): "
+read restart_confirmed
 
-if ! [ "$continue_confirmed" = "yes" ]
+if ! [ "$restart_confirmed" = "yes" ]
 then
    fancy_echo "done..."
    exit 0

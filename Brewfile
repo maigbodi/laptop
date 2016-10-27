@@ -79,7 +79,6 @@ brew 'm-cli'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlprettypatch'
-cask 'quicklook-csv'
 cask 'quicklook-json'
 
 # Cask Fonts
@@ -91,7 +90,6 @@ cask 'font-source-sans-pro'
 # Apps
 cask 'charles'
 cask 'mongohub'
-cask 'pocket'
 cask 'postman'
 cask 'slack'
 cask 'github-desktop'
