@@ -68,8 +68,8 @@ echo $passwd | sudo -S -k rm -Rf $HOME/Library/Saved\ Application\ State/com.app
 green_echo "done."
 
 fancy_echo "Removing homebrew cask apps..."
-brew cask uninstall --force $(brew cask list)
 brew cask zap --force $(brew cask list)
+brew cask uninstall --force $(brew cask list)
 brew cask cleanup
 green_echo "done."
 
