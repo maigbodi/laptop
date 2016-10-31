@@ -9,11 +9,11 @@ HOMEBREW_PREFIX="/usr/local"
 
 if [ -d "$HOMEBREW_PREFIX" ]; then
   green_echo "Chowning $HOMEBREW_PREFIX to \"$(whoami):admin\"..."
-  echo $passwd | sudo -S chown -R "$(whoami):admin" "$HOMEBREW_PREFIX"
+  sudo chown -R "$(whoami):admin" "$HOMEBREW_PREFIX"
 else
-  echo $passwd | sudo -S -k mkdir "$HOMEBREW_PREFIX"
-  echo $passwd | sudo -S -k chflags norestricted "$HOMEBREW_PREFIX"
-  echo $passwd | sudo -S chown -R "$(whoami):admin" "$HOMEBREW_PREFIX"
+  sudo mkdir "$HOMEBREW_PREFIX"
+  sudo chflags norestricted "$HOMEBREW_PREFIX"
+  sudo chown -R "$(whoami):admin" "$HOMEBREW_PREFIX"
 fi
 
 if ! command -v brew >/dev/null; then

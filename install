@@ -19,7 +19,7 @@ source macos.sh
 
 # Run Apple Update
 fancy_echo "Updating macOS..."
-echo $passwd | sudo -S -k softwareupdate -i -a
+sudo softwareupdate -i -a
 green_echo "done."
 
 # Run tests
@@ -43,6 +43,5 @@ then
    exit 0
 else
   fancy_echo "Restarting..."
-  echo $passwd | sudo -S -k shutdown -r now "Restarting machine"
-  unset passwd
+  sudo shutdown -r now "Restarting machine"
 fi

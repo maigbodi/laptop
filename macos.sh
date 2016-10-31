@@ -10,7 +10,7 @@ rm -rf $temp
 
 # Install tccutil and add terminal to list of allowed assistive devices
 curl -O https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py
-echo $passwd | sudo -S -k python ./tccutil.py --verbose --insert com.apple.Terminal
+sudo python ./tccutil.py --verbose --insert com.apple.Terminal
 
 
 # Desktop Background
@@ -91,8 +91,8 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 fancy_echo "Setting user avatar..."
 echo "0x0A 0x5C 0x3A 0x2C dsRecTypeStandard:Users 4 dsAttrTypeStandard:RecordName externalbinary:dsAttrTypeStandard:JPEGPhoto dsAttrTypeStandard:UniqueID dsAttrTypeStandard:PrimaryGroupID dsAttrTypeStandard:GeneratedUID" > $HOME/avatar_import.txt
 echo $USER:$HOME/Pictures/avatar.jpg:$UID:$(id -g):$(dscl . -read /Users/$USER GeneratedUID | cut -d' ' -f2) >> $HOME/avatar_import.txt
-echo $passwd | sudo -S -k dscl . -delete /Users/$USER JPEGPhoto
-echo $passwd | sudo -S -k dsimport $HOME/avatar_import.txt /Local/Default M -u diradmin
+sudo dscl . -delete /Users/$USER JPEGPhoto
+sudo dsimport $HOME/avatar_import.txt /Local/Default M -u diradmin
 rm -f $HOME/avatar_import.txt
 
 # Configure Dock
@@ -114,12 +114,12 @@ fancy_echo "Restarting Finder..."
 killall Finder && open /System/Library/CoreServices/Finder.app
 
 fancy_echo "Rebuilding font cache..."
-echo $passwd | sudo -S -k atsutil databases -remove
+sudo atsutil databases -remove
 
 # Build locate database
 fancy_echo "Building locate database..."
-echo $passwd | sudo -S -k launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-echo $passwd | sudo -S -k /usr/libexec/locate.updatedb
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+sudo /usr/libexec/locate.updatedb
 echo "Finished building locate database"
 
 fancy_echo "Configuring terminal..."
