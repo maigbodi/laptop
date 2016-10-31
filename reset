@@ -45,6 +45,9 @@ rm -rf $HOME/.Trash/*
 green_echo "Trash Empty"
 green_echo "done."
 
+# Unset github in OSX Keychain
+echo "host=github.com\nprovider=https" | git credential-osxkeychain erase
+
 # Delete Chrome History
 rm -rf $HOME/Library/Application\ Support/Google/Chrome/Default/History
 rm -rf $HOME/Library/Application\ Support/Google/Chrome/Default/History-journal
