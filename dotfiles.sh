@@ -7,5 +7,6 @@ curl -O https://raw.githubusercontent.com/spartaglobal/laptop/master/assets/dotf
 curl -O https://raw.githubusercontent.com/spartaglobal/laptop/master/assets/dotfiles/.irbrc
 curl -O https://raw.githubusercontent.com/spartaglobal/laptop/master/assets/dotfiles/.gitconfig
 curl -O https://raw.githubusercontent.com/spartaglobal/laptop/master/assets/dotfiles/.git_status_in_prompt.sh
+echo "gem: --no-document" > $HOME/.gemrc
 cd $LAPTOP_INSTALL_DIR
 fancy_echo "dotfiles done!"
