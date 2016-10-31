@@ -1,6 +1,9 @@
 fancy_echo "Updating NVM, Node and NPM..."
 
-nvm install 0.10
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+
+nvm install node
 node --version
 
 npm update npm -g
