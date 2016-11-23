@@ -71,6 +71,8 @@ brew "mysql", restart_service: true
 
 # Automation
 brew "chromedriver"
+brew "geckodriver"
+brew "phantomjs"
 
 # Mac Stuff
 brew 'm-cli'
