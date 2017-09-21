@@ -14,12 +14,12 @@ green_echo "done."
 # Set current directory, so we can change back to it in the scripts.
 export LAPTOP_INSTALL_DIR=$(pwd)
 
-source config.sh
-source homebrew.sh
-source ruby.sh
-source node.sh
-source macos.sh
-source ohmyzsh.sh
+source $HOME/laptop/config.sh
+source $HOME/laptop/homebrew.sh
+source $HOME/laptop/ruby.sh
+source $HOME/laptop/node.sh
+source $HOME/laptop/macos.sh
+source $HOME/laptop/ohmyzsh.sh
 
 echo
 green_echo "---------------------- Setup Finished! ----------------------"
