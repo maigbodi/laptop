@@ -9,7 +9,7 @@ node --version
 npm update npm -g
 npm update -g
 
-fancy_echo "Istalling global NPM packages..."
+fancy_echo "Installing global NPM packages..."
 
 npm install -g nodemon 
 green_echo "Done with Node/NPM installs!"

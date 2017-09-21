@@ -2,4 +2,4 @@
 echo "Cloning laptop repo..."
 git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
 echo "Running reset script..."
-$HOME/laptop/scripts/reset
+$HOME/laptop/reset

@@ -18,6 +18,5 @@ brew cleanup
 brew cask cleanup
 brew doctor
 brew cask doctor
-green_echo "done."
 
 green_echo "Done with homebrew installs!"

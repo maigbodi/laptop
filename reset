@@ -6,7 +6,7 @@ echo "Welcome to the Sparta macOS Resetter"
 echo "------------------------------------"
 echo
 
-source ../src/config.sh
+source config.sh
 
 fancy_echo "This script will RESET your laptop"
 input_echo "Are you sure you want to RESET this laptop? There is no going back! Type yes to continue:"

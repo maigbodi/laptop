@@ -9,12 +9,12 @@ echo
 # Set current directory, so we can change back to it in the scripts.
 export LAPTOP_INSTALL_DIR=$(pwd)
 
-source $LAPTOP_INSTALL_DIR/src/config.sh
-source $LAPTOP_INSTALL_DIR/src/homebrew.sh
-source $LAPTOP_INSTALL_DIR/src/ruby.sh
-source $LAPTOP_INSTALL_DIR/src/node.sh
-source $LAPTOP_INSTALL_DIR/src/macos.sh
-source $LAPTOP_INSTALL_DIR/src/ohmyzsh.sh
+source config.sh
+source homebrew.sh
+source ruby.sh
+source node.sh
+source macos.sh
+source ohmyzsh.sh
 
 # Run Apple Update
 fancy_echo "Updating macOS..."
