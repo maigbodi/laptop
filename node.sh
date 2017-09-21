@@ -1,3 +1,4 @@
+# Installing and updating nvm, node and npm to the most recent versions
 fancy_echo "Updating NVM, Node and NPM..."
 
 export NVM_DIR="$HOME/.nvm"
