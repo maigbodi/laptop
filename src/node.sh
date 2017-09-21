@@ -11,6 +11,5 @@ npm update -g
 
 fancy_echo "Istalling global NPM packages..."
 
-npm install -g pryjs nodemon browser-sync
-
+npm install -g nodemon 
 green_echo "Done with Node/NPM installs!"
