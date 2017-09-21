@@ -31,7 +31,6 @@ brew "nvm"
 brew "rbenv"
 
 # Databases
-brew "postgres", restart_service: true
 brew "mongodb", restart_service: true
 
 # Automation
