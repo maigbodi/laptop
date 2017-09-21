@@ -43,6 +43,9 @@ rm -rf $HOME/Sites/*
 green_echo "Sites Cleared"
 rm -rf $HOME/.Trash/*
 green_echo "Trash Empty"
+rm -rf $HOME/development/*
+rm -rf $HOME/Development/*
+green_echo "Development Cleared"
 rm -rf $HOME/.ssh/*
 green_echo "SSH Empty"
 green_echo "done."
