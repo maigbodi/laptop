@@ -9,7 +9,7 @@ This script is designed to install and configure Sparta student and trainer macO
 3. Run the install script:
 
 ```shell
-`cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-install)`
+`cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/scripts/remote-install)`
 ```
 Type the **password you use to login** when prompted.
 
@@ -19,7 +19,7 @@ Type the **password you use to login** when prompted.
 2. Run the install script:
 
 ```shell
-`cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-reset)`
+`cd ~; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/scripts/remote-reset)`
 ```
 Type the **password you use to login** when prompted.
 
