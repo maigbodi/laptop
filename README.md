@@ -6,20 +6,24 @@ This script is designed to install and configure Sparta student and trainer macO
 
 1. Initial macOS Setup Wizard (Laptop name, WiFi etc). Admin staff will provide the username and password to use when configuring this part.
 2. Open the Terminal application.
-3. Run the install script:
+3. Run the install scripts, one after the other:
 
 ```shell
-`cd ~; rm -rf ./laptop; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-install); bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/ohmyzsh-cleanup.sh);`
+`cd ~; rm -rf ./laptop; `
+
+`bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-install);`
 ```
 Type the **password you use to login** when prompted.
 
 ## Steps to reset a Mac
 
 1. Open the Terminal application.
-2. Run the install script:
+2. Run the install scripts, one after another:
 
 ```shell
-`cd ~; rm -rf ./laptop; bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-reset); bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/ohmyzsh-cleanup.sh);`
+`cd ~; rm -rf ./laptop;`
+
+`bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-reset)`
 ```
 Type the **password you use to login** when prompted.
 
