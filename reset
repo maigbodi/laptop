@@ -6,7 +6,7 @@ echo "Welcome to the Sparta macOS Resetter"
 echo "------------------------------------"
 echo
 
-source config.sh
+source $HOME/laptop/config.sh
 
 fancy_echo "This script will RESET your laptop"
 input_echo "Are you sure you want to RESET this laptop? There is no going back! Type yes to continue:"
@@ -43,6 +43,11 @@ rm -rf $HOME/Sites/*
 green_echo "Sites Cleared"
 rm -rf $HOME/.Trash/*
 green_echo "Trash Empty"
+rm -rf $HOME/development/*
+rm -rf $HOME/Development/*
+green_echo "Development Cleared"
+rm -rf $HOME/.ssh/*
+green_echo "SSH Empty"
 green_echo "done."
 
 # Unset github in OSX Keychain
@@ -91,40 +96,6 @@ fancy_echo "Clearing dotfiles..."
 rm -rf $HOME/.*
 green_echo "done."
 
-# Run setup scripts
-source homebrew.sh
-source ruby.sh
-source dotfiles.sh
-source node.sh
-source vim.sh # Must be sourced after dotfiles.sh
-source macos.sh
-
-# Run Apple Update
-fancy_echo "Updating macOS..."
-sudo softwareupdate -i -a
-green_echo "done."
-
-# Run tests
-source tests.sh
-
-echo
-green_echo "---------------------- Setup Finished! ----------------------"
-green_echo "💃💃             🍺  Done reprovisioning laptop! 🍺           💃💃"
-green_echo "-------------------------------------------------------------"
-echo
-
-sleep 5
-
-
-fancy_echo "Don't forget to check the output of the unit tests."
-input_echo "Do you want to restart the machine now? (type 'yes'): "
-read restart_confirmed
-
-if ! [ "$restart_confirmed" = "yes" ]
-then
-   fancy_echo "All done!"
-   exit 0
-else
-  fancy_echo "Restarting..."
-  sudo shutdown -r now "Restarting machine"
-fi
+cd $HOME/laptop
+echo "Running install script..."
+$HOME/laptop/install

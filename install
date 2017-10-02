@@ -6,24 +6,20 @@ echo "Welcome to the Sparta macOS Installer"
 echo "-------------------------------------"
 echo
 
-# Set current directory, so we can change back to it in the scripts.
-export LAPTOP_INSTALL_DIR=$(pwd)
-
-source config.sh
-source homebrew.sh
-source ruby.sh
-source dotfiles.sh
-source node.sh
-source vim.sh # Must be sourced after dotfiles.sh
-source macos.sh
-
 # Run Apple Update
 fancy_echo "Updating macOS..."
 sudo softwareupdate -i -a
 green_echo "done."
 
-# Run tests
-source tests.sh
+# Set current directory, so we can change back to it in the scripts.
+export LAPTOP_INSTALL_DIR=$(pwd)
+
+source $HOME/laptop/config.sh
+source $HOME/laptop/homebrew.sh
+source $HOME/laptop/ruby.sh
+source $HOME/laptop/node.sh
+source $HOME/laptop/macos.sh
+source $HOME/laptop/ohmyzsh.sh
 
 echo
 green_echo "---------------------- Setup Finished! ----------------------"
@@ -31,17 +27,5 @@ green_echo "💃💃               🍺  Done provisioning laptop! 🍺         
 green_echo "-------------------------------------------------------------"
 echo
 
-sleep 5
-
-fancy_echo "Don't forget to check the output of the unit tests."
-input_echo "Do you want to restart the machine now? (type 'yes'): "
-read restart_confirmed
-
-if ! [ "$restart_confirmed" = "yes" ]
-then
-   fancy_echo "All done!"
-   exit 0
-else
-  fancy_echo "Restarting..."
-  sudo shutdown -r now "Restarting machine"
-fi
+fancy_echo "Restarting..."
+sudo shutdown -r now "Restarting machine"

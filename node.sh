@@ -1,3 +1,4 @@
+# Installing and updating nvm, node and npm to the most recent versions
 fancy_echo "Updating NVM, Node and NPM..."
 
 export NVM_DIR="$HOME/.nvm"
@@ -9,8 +10,7 @@ node --version
 npm update npm -g
 npm update -g
 
-fancy_echo "Istalling global NPM packages..."
+fancy_echo "Installing global NPM packages..."
 
-npm install -g pryjs nodemon browser-sync
-
+npm install -g nodemon 
 green_echo "Done with Node/NPM installs!"

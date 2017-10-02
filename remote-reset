@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Cloning laptop repo..."
 git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
-cd $HOME/laptop
 echo "Running reset script..."
 $HOME/laptop/reset
+$HOME/laptop/ohmyzsh-cleanup
