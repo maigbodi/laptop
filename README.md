@@ -9,7 +9,8 @@ This script is designed to install and configure Sparta student and trainer macO
 3. Select the disk title Macintosh HD and select Erase - ensure the dropdown has the _Journaled_ option selected.
 4. Once the disk has been erased, go back to the Mac OSX Utility screen by shutting down Disk Utility
 5. Select Reinstall OSX, the second option, and click through the screens to complete reinstall.
-6. Once reinstall has been completed, restart the mac and login as the user. Then, continue with the steps below.
+6. Once reinstall has been completed, restart the mac.
+7. Complete the OSX install Wizard and create the profile with the necessary credentials (sourced from admin).
 
 ## Laptop Script
 
