@@ -32,6 +32,7 @@ brew "rbenv"
 
 # Databases
 brew "mongodb", restart_service: true
+brew "mysql"
 
 # Automation
 brew "chromedriver"
