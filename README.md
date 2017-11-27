@@ -15,7 +15,7 @@ This script is designed to install and configure Sparta student and trainer macO
 ## Laptop Script
 
 1. Open the Terminal application.
-2. Run the following install scripts, one after the other:
+2. Run the following install scripts, one after the other. If promted to install Xcode Command Line tools, do so then rerun the script that you attempted.
 
 ```shell
 cd ~; rm -rf ./laptop;
