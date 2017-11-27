@@ -20,7 +20,7 @@ This script is designed to install and configure Sparta student and trainer macO
 ```shell
 cd ~; rm -rf ./laptop;
 
-bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/install);
+bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/main);
 
 bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/cleanup);
 
