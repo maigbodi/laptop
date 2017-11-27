@@ -15,17 +15,3 @@ source $HOME/laptop/ruby.sh
 source $HOME/laptop/node.sh
 source $HOME/laptop/macos.sh
 source $HOME/laptop/ohmyzsh.sh
-
-# Run Apple Update
-fancy_echo "Updating macOS..."
-sudo softwareupdate -i -a
-green_echo "done."
-
-echo
-green_echo "---------------------- Setup Finished! ----------------------"
-green_echo "💃💃               🍺  Done provisioning laptop! 🍺           💃💃"
-green_echo "-------------------------------------------------------------"
-echo
-
-fancy_echo "Restarting..."
-sudo shutdown -r now "Restarting machine"

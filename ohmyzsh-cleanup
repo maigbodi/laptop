@@ -9,3 +9,17 @@ echo "Downloading custom zsh theme for sparta..."
 echo "-------------------------------------"
 echo
 (curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/sparta.zsh-theme) > "$HOME/.oh-my-zsh/themes/sparta.zsh-theme"
+
+# Run Apple Update
+echo "Updating macOS..."
+sudo softwareupdate -i -a
+echo "done."
+
+echo
+echo "---------------------- Setup Finished! ----------------------"
+echo "💃💃               🍺  Done provisioning laptop! 🍺           💃💃"
+echo "-------------------------------------------------------------"
+echo
+
+echo "Restarting..."
+sudo shutdown -r now "Restarting machine"
