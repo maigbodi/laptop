@@ -1,3 +1,7 @@
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
 # Update Homebrew
 fancy_echo "Running brew update..."
 brew update
