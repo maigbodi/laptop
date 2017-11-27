@@ -5,6 +5,8 @@ echo "Running install script..."
 $HOME/laptop/install
 cd $HOME/laptop
 
+sudo systemsetup -setcomputersleep 180
+
 echo "Welcome to the Sparta macOS Installer"
 echo "-------------------------------------"
 echo
