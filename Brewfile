@@ -37,6 +37,7 @@ brew "mysql"
 # Automation
 brew "chromedriver"
 brew "geckodriver"
+brew "rbenv-chefdk"
 
 # Apps
 cask 'postman'
