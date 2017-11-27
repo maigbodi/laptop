@@ -2,37 +2,30 @@
 
 This script is designed to install and configure Sparta student and trainer macOS machines.
 
-## Steps to configure a new Mac
+## Factory Reset (only if the Mac is being reset...)
 
-1. Initial macOS Setup Wizard (Laptop name, WiFi etc). Admin staff will provide the username and password to use when configuring this part.
-2. Open the Terminal application.
-3. Run the install scripts, one after the other:
+1. Turn the mac on while holding down Command+R - this should open the Mac OSX Utility screen.
+2. Select Disk Utility
+3. Select the disk title Macintosh HD and select Erase - ensure the dropdown has the _Journaled_ option selected.
+4. Once the disk has been erased, go back to the Mac OSX Utility screen by shutting down Disk Utility
+5. Select Reinstall OSX, the second option, and click through the screens to complete reinstall.
+6. Once reinstall has been completed, restart the mac and login as the user. Then, continue with the steps below.
+
+## Laptop Script
+
+1. Open the Terminal application.
+2. Run the following install scripts, one after the other:
 
 ```shell
 cd ~; rm -rf ./laptop;
 
 bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-install);
-```
-Type the **password you use to login** when prompted.
 
-## Steps to reset a Mac
+bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/ohmyzsh-cleanup);
 
-1. Open the Terminal application.
-2. Run the install scripts, one after another:
-
-```shell
 cd ~; rm -rf ./laptop;
 
-bash <(curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/remote-reset)
 ```
 Type the **password you use to login** when prompted.
-
-
-## Inspiration
-
-Bits of this script were borrowed from all over the internet, but in particular:
-
-- <https://github.com/attack/laptop>
-- <https://github.com/thoughtbot/laptop/>
 
 Initially built by [@dannysmith](http://github.com/dannysmith), edited by [Ollie Holden](http://github.com/odholden).

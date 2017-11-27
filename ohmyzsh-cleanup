@@ -1,7 +1,11 @@
 # Updating .zshrc with necessary rbenv setup and path variables
-fancy_echo "Editing .zshrc..."
+echo "Downloading improved .zshrc..."
+echo "-------------------------------------"
+echo
 (curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/.zshrc) > "$HOME/.zshrc"
 
 # Installing custom oh-my-zsh theme
-fancy_echo "Downloading custom zsh theme..."
+echo "Downloading custom zsh theme for sparta..."
+echo "-------------------------------------"
+echo
 (curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/sparta.zsh-theme) > "$HOME/.oh-my-zsh/themes/sparta.zsh-theme"
