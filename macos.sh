@@ -21,6 +21,10 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
+# Screensaver off
+defaults write com.apple.screensaver idleTime 0
+
+
 # Profile Picture
 fancy_echo "Setting user avatar..."
 echo "0x0A 0x5C 0x3A 0x2C dsRecTypeStandard:Users 4 dsAttrTypeStandard:RecordName externalbinary:dsAttrTypeStandard:JPEGPhoto dsAttrTypeStandard:UniqueID dsAttrTypeStandard:PrimaryGroupID dsAttrTypeStandard:GeneratedUID" > $HOME/avatar_import.txt
