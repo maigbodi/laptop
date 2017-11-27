@@ -1,7 +1,0 @@
-#!/bin/bash
-echo "Cloning laptop repo..."
-git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
-echo "Running install script..."
-$HOME/laptop/install
-cd $HOME/laptop
-

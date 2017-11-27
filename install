@@ -1,13 +1,13 @@
-#!/bin/sh
-
-# Sparta Global laptop reset script!
+#!/bin/bash
+echo "Cloning laptop repo..."
+git clone https://github.com/spartaglobal/laptop.git $HOME/laptop
+echo "Running install script..."
+$HOME/laptop/install
+cd $HOME/laptop
 
 echo "Welcome to the Sparta macOS Installer"
 echo "-------------------------------------"
 echo
-
-# Set current directory, so we can change back to it in the scripts.
-export LAPTOP_INSTALL_DIR=$(pwd)
 
 source $HOME/laptop/config.sh
 source $HOME/laptop/homebrew.sh
