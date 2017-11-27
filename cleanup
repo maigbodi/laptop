@@ -10,11 +10,6 @@ echo "-------------------------------------"
 echo
 (curl -s https://raw.githubusercontent.com/spartaglobal/laptop/master/sparta.zsh-theme) > "$HOME/.oh-my-zsh/themes/sparta.zsh-theme"
 
-# Run Apple Update
-echo "Updating macOS..."
-sudo softwareupdate -i -a
-echo "done."
-
 echo
 echo "---------------------- Setup Finished! ----------------------"
 echo "💃💃               🍺  Done provisioning laptop! 🍺           💃💃"
