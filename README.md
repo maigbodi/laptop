@@ -38,11 +38,11 @@ There are two scripts to be cloned down and run:
  
 ### Script breakdown
 
-**config.sh** - Adds some fancier echos to make the script easier on the eye. Also sets the super user so that it needs only be entered once.
-**homebrew.sh** - Installs the Homebrew package manager and necessary packages. Please use the Brewfile to change the packages that are installed.
-**ruby.sh** - Uses `rbenv` (installed using homebrew) to install and configure the ruby version for the machine. To alter the ruby version, use this file.
-**node.sh** - Uses `nvm` to install and update `node` and `npm`. `nodemon` is the only package to be pre-installed, all others are currently added in lessons. However, any node packages can be added here.
-**macos.sh** - Configures the machine including user preferences, default images and desktop backgrounds. 
-**ohmyzsh.sh** - Installs `zsh` and `oh-my-zsh` for easier command line usage. Can be excluded from the script to leave plain bash if desired. If excluded, the `cleanup` script is also redundant.
+ - **config.sh** - Adds some fancier echos to make the script easier on the eye. Also sets the super user so that it needs only be entered once.
+ - **homebrew.sh** - Installs the Homebrew package manager and necessary packages. Please use the Brewfile to change the packages that are installed.
+ - **ruby.sh** - Uses `rbenv` (installed using homebrew) to install and configure the ruby version for the machine. To alter the ruby version, use this file.
+ - **node.sh** - Uses `nvm` to install and update `node` and `npm`. `nodemon` is the only package to be pre-installed, all others are currently added in lessons. However, any node packages can be added here.
+ - **macos.sh** - Configures the machine including user preferences, default images and desktop backgrounds. 
+ - **ohmyzsh.sh** - Installs `zsh` and `oh-my-zsh` for easier command line usage. Can be excluded from the script to leave plain bash if desired. If excluded, the `cleanup` script is also redundant.
 
 Initially built by [@dannysmith](http://github.com/dannysmith), edited by [Ollie Holden](http://github.com/odholden).
