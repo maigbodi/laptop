@@ -4,7 +4,7 @@ This script is designed to install and configure Sparta student and trainer macO
 
 ## Instructions
 
-### Factory Reset (only if the Mac is being reset...)
+### Factory Reset - OS X Sierra only (if the Mac is not new...)
 
 1. Turn the mac on while holding down Command+R - this should open the Mac OSX Utility screen.
 2. Select Disk Utility
